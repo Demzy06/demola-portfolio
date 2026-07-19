@@ -3,6 +3,8 @@ import Header from "../components/Header";
 import AboutDev from "../components/AboutDev";
 import ProjectsSection from "../components/ProjectsSection";
 import TechStackSection from "../components/TechStackSection";
+import CtaSection from "../components/CtaSection";
+import { ContactForm } from "../components/ContactForm";
 function HomePage() {
   return (
     <div className="">
@@ -11,6 +13,8 @@ function HomePage() {
       <ProjectsSection />
       <AboutDev />
       <TechStackSection />
+      <CtaSection />
+      <ContactForm />
     </div>
   );
 }
