@@ -7,6 +7,7 @@ const techStacks = [
   "Bootstrap",
   "Styled Components",
   "Motion",
+  "Git",
 ];
 function TechStackSection() {
   return (
