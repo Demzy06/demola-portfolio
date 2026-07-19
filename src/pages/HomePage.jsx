@@ -5,6 +5,7 @@ import ProjectsSection from "../components/ProjectsSection";
 import TechStackSection from "../components/TechStackSection";
 import CtaSection from "../components/CtaSection";
 import { ContactForm } from "../components/ContactForm";
+import Footer from "../components/Footer";
 function HomePage() {
   return (
     <div className="">
@@ -15,6 +16,7 @@ function HomePage() {
       <TechStackSection />
       <CtaSection />
       <ContactForm />
+      <Footer />
     </div>
   );
 }
