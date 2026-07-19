@@ -10,8 +10,13 @@ import ShareBoxFillIcon from "@iconify-react/ri/share-box-fill";
 function ProjectCard({ project }) {
   return (
     <div className="mb-20">
-      <div className="mb-8 shadow-xl ">
-        <img src={project.image} alt="project-snapshot" srcset="" />
+      <div className="mb-8 shadow-xl rounded-xl">
+        <img
+          src={project.image}
+          alt="project-snapshot"
+          srcset=""
+          className="rounded-xl"
+        />
       </div>
       <div>
         <ProjectStack projectStack={project.stack} />
@@ -27,7 +32,6 @@ function ProjectCard({ project }) {
                 style={{ color: "#818181", width: "12px", height: "fit" }}
               />
             }
-            // iconStyles="w-3 h-fit"
             path={project.link}
           />
           <Button
@@ -39,7 +43,6 @@ function ProjectCard({ project }) {
                 style={{ color: "#818181", width: "16px" }}
               />
             }
-            // iconStyles="w-4 h-fit"
             path={project.repo}
           />
         </div>
