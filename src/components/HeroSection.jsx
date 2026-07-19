@@ -1,9 +1,15 @@
 import Button from "./Button";
-
+import BackdropImg from "../assets/backdrop-svg.svg";
 function HeroSection() {
   return (
-    <section className="mt-39 pl-5 pr-5 mb-15">
-      <h3 className="text-[18px] font-medium mb-4 text-secondary">
+    <section className="mt-39 pl-5 pr-5 mb-15 ">
+      {/* <img
+        src={BackdropImg}
+        alt=""
+        srcset=""
+        className="absolute top-10 left-2.5 right-0 w-19  -z-1"
+      /> */}
+      <h3 className="text-[18px] font-medium mb-2 text-secondary">
         Hey there, I'm-
       </h3>
       <div>
