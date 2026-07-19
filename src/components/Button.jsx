@@ -5,11 +5,12 @@ function Button({ className, text, icon, iconStyles, path }) {
     <button className={`${className} ${icon && "flex"}`}>
       <a href={path} target="_blank" className={`${icon && "flex"}`}>
         {text}
-        {icon && (
-          <span className="w-fit flex items-center ml-2">
+        {
+          // icon && <span className="w-fit flex items-center ml-2">{icon}</span>
+          <div className="w-fit flex items-center ml-2">
             <img src={icon} className={`${iconStyles}`} />
-          </span>
-        )}
+          </div>
+        }
       </a>
     </button>
   );
