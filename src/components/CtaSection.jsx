@@ -1,4 +1,5 @@
 import Button from "./Button";
+import ButtonJumpTo from "./ButtonJumpTo";
 
 function CtaSection() {
   return (
@@ -11,9 +12,11 @@ function CtaSection() {
           Currently accepting new projects and collaboration opportunities.
           Let's create a digital experience that stands out
         </p>
-        <Button
+        <ButtonJumpTo
           text="Start a project"
           className="pr-8 pl-8 p-3.5 uppercase text-[13px] tracking-widest bg-black text-white"
+          path="contact"
+          offset={-60}
         />
       </div>
     </section>
