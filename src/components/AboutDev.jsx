@@ -4,7 +4,7 @@ function AboutDev() {
       <h4 className="uppercase text-[14px] mb-1 text-[#707070]">
         The Developer
       </h4>
-      <h1 className="mb-3  tracking-tight">Precision In Every Line Of Code </h1>
+      <h1 className="mb-3 tracking-tight">Precision In Every Line Of Code </h1>
       <p className="text-[#707070] mb-2">
         I'm a frontend developer who enjoys turning ideas into simple,
         user-friendly websites and web applications. With over 3 years of
