@@ -10,7 +10,7 @@ const techStacks = [
 ];
 function TechStackSection() {
   return (
-    <section className="border-t border-[#EEEEEE] pt-10 pl-5 pr-5 mb-10">
+    <section className="border-t border-[#EEEEEE] pt-10 pl-5 pr-5 ">
       <h4 className="uppercase text-[11px] font-bold tracking-[0.15rem] text-[#727272]">
         Technical Stack
       </h4>
