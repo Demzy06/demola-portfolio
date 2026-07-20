@@ -9,8 +9,8 @@ export const ContactForm = () => {
     e.preventDefault();
 
     emailjs
-      .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", form.current, {
-        publicKey: "YOUR_PUBLIC_KEY",
+      .sendForm("service_eakfgg3", "template_npalmoc", form.current, {
+        publicKey: "OZY428ci0qoSf8098",
       })
       .then(
         () => {
@@ -25,7 +25,6 @@ export const ContactForm = () => {
   return (
     <Element name="contact">
       <form
-        // id="contact"
         ref={form}
         onSubmit={sendEmail}
         className="border-t border-[#EEEEEE] pt-10 pl-5 pr-5 mb-10"
