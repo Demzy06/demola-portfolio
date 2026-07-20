@@ -4,7 +4,7 @@ import ButtonJumpTo from "./ButtonJumpTo";
 function CtaSection() {
   return (
     <section className="border-t border-[#EEEEEE] pt-20 pl-5 pr-5 mb-10">
-      <div className="text-center">
+      <div className="text-center pb-10">
         <h1 className="mb-6  tracking-tight leading-12">
           Ready to Build Something Extraordinary?
         </h1>
