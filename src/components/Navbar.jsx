@@ -1,5 +1,6 @@
 import ButtonJumpTo from "./ButtonJumpTo";
 import { Link } from "react-scroll";
+import { useInView } from "react-intersection-observer";
 
 const navLinks = [
   { title: "Projects", path: "projects" },
@@ -9,11 +10,17 @@ const navLinks = [
 ];
 
 function Navbar({ navIsOpen, setNavIsOpen }) {
+  const { ref, inView } = useInView({
+    threshold: 0.5,
+  });
   return (
     <nav
-      className={`${navIsOpen ? "block" : "hidden"} flex  pt-14 flex-col items-center h-dvh fixed bg-white top-18 z-100 w-full`}
+      className={`${navIsOpen ? `block` : `hidden`} flex  pt-14 flex-col items-center h-dvh fixed bg-white top-18 z-100 w-full`}
     >
-      <ul className="w-fit  text-center">
+      <ul
+        ref={ref}
+        className={`${inView ? "opacity-100 ease-in-out translate-y-0 scale-[1]" : "opacity-0 translate-y-2 scale-[0.9]"} transition-all duration-800 w-fit text-center`}
+      >
         {navLinks.map((nav) => (
           <Link
             to={nav.path}
@@ -28,10 +35,14 @@ function Navbar({ navIsOpen, setNavIsOpen }) {
           </Link>
         ))}
       </ul>
-      <ButtonJumpTo
-        text="Start Project"
-        className="pl-12 pr-12 p-3.5 bg-black text-white mt-8 text-[17px] rounded-3xl w-fit "
-      />
+      <div
+        className={`${inView ? "opacity-100 ease-in-out translate-y-0 scale-[1]" : "opacity-0 translate-y-2 scale-[0.9]"} transition-all duration-800 mt-8`}
+      >
+        <ButtonJumpTo
+          text="Start Project"
+          className="pl-12 pr-12 p-3.5 bg-black text-white  text-[17px] rounded-3xl w-fit "
+        />
+      </div>
     </nav>
   );
 }
