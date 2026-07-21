@@ -40,7 +40,9 @@ function Navbar({ navIsOpen, setNavIsOpen }) {
       >
         <ButtonJumpTo
           text="Start Project"
-          className="pl-12 pr-12 p-3.5 bg-black text-white  text-[17px] rounded-3xl w-fit "
+          className="pl-12 pr-12 p-3.5 font-semibold bg-black text-white tracking-wider text-[17px] rounded-3xl w-fit "
+          path="contact"
+          setNavIsOpen={setNavIsOpen}
         />
       </div>
     </nav>
