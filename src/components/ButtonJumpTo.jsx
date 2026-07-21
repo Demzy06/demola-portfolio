@@ -1,6 +1,6 @@
 import { Link } from "react-scroll";
 
-function ButtonJumpTo({ className, text, path, offset }) {
+function ButtonJumpTo({ className, text, path, offset, setNavIsOpen }) {
   return (
     <Link
       to={path}
@@ -8,6 +8,7 @@ function ButtonJumpTo({ className, text, path, offset }) {
       duration={500}
       offset={offset}
       className={className}
+      onClick={setNavIsOpen ? () => setNavIsOpen((isOpen) => !isOpen) : ""}
     >
       <button>{text}</button>
     </Link>
