@@ -1,3 +1,4 @@
+import { Element } from "react-scroll";
 import ProjectCard from "./ProjectCard";
 
 import GreenworldPic from "../assets/projectsImages/greenworld.webp";
@@ -38,19 +39,21 @@ const projects = [
 
 function ProjectsSection() {
   return (
-    <section className="border-t border-[#EEEEEE] pt-10 pl-5 pr-5">
-      <div className="">
-        {/* <h4 className="uppercase w-fit text-[14px] ml-auto font-medium text-secondry mb-3">
+    <Element name="projects">
+      <section className="border-t border-[#EEEEEE] pt-10 pl-5 pr-5">
+        <div className="">
+          {/* <h4 className="uppercase w-fit text-[14px] ml-auto font-medium text-secondry mb-3">
           Selected Works
-        </h4> */}
-        <h1 className="w-fit ml-auto tracking-tight mb-25 font-bold">
-          Featured <span className="text-secondary">Projects</span>
-        </h1>
-      </div>
-      {projects.map((project) => (
-        <ProjectCard project={project} />
-      ))}
-    </section>
+          </h4> */}
+          <h1 className="w-fit ml-auto tracking-tight mb-25 font-bold">
+            Featured <span className="text-secondary">Projects</span>
+          </h1>
+        </div>
+        {projects.map((project) => (
+          <ProjectCard project={project} />
+        ))}
+      </section>
+    </Element>
   );
 }
 
