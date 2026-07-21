@@ -1,6 +1,6 @@
-import React, { useRef } from "react";
-import emailjs from "@emailjs/browser";
+import { useRef } from "react";
 import { Element } from "react-scroll";
+import emailjs from "@emailjs/browser";
 
 export const ContactForm = () => {
   const form = useRef();
@@ -37,6 +37,7 @@ export const ContactForm = () => {
           name="user_name"
           className="block pt-2.5 pb-2.5 w-full border-b mb-8 outline-none border-[#cfcfcf] placeholder:text-[#cfcfcf]"
           placeholder="E.g John Doe"
+          required
         />
         <label className="text-[13px] text-secondary block mb- w-fit uppercase font-semibold">
           Email Address
@@ -46,6 +47,7 @@ export const ContactForm = () => {
           name="user_email"
           className="block pt-3 pb-3 w-full border-b mb-8 outline-none border-[#cfcfcf] placeholder:text-[#cfcfcf]"
           placeholder="john@company.com"
+          required
         />
         <label className="text-[13px] text-secondary block mb- w-fit uppercase font-semibold">
           Subject
@@ -55,6 +57,7 @@ export const ContactForm = () => {
           name="subject"
           className="block pt-3 pb-3 w-full border-b mb-8 outline-none border-[#cfcfcf] placeholder:text-[#cfcfcf]"
           placeholder="New Project Collaboration"
+          required
         />
         <label className="text-[13px] text-secondary block mb- w-fit uppercase font-semibold">
           Message
@@ -63,6 +66,7 @@ export const ContactForm = () => {
           name="message"
           className="block pt-3 pb-15 w-full border-b mb-8 outline-none border-[#cfcfcf] placeholder:text-[#cfcfcf]"
           placeholder="Tell me about your vision..."
+          required
         />
         <input
           type="submit"
