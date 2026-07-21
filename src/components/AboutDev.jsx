@@ -4,7 +4,7 @@ function AboutDev() {
   return (
     <Element name="about">
       <section className="border-t border-[#EEEEEE] pt-10 pl-5 pr-5 mb-10">
-        <h4 className="uppercase text-[14px] mb-1 text-[#707070]">
+        <h4 className="uppercase text-[14px] mb-1 text-secondary">
           The Developer
         </h4>
         <h1 className="mb-3 tracking-tight">Precision In Every Line Of Code</h1>
