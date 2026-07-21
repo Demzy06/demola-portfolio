@@ -1,3 +1,4 @@
+import { useInView } from "react-intersection-observer";
 import { Element } from "react-scroll";
 import ProjectCard from "./ProjectCard";
 
@@ -13,7 +14,7 @@ const projects = [
     stack: ["Html", "Css", "JavaScript"],
     projectName: "GreenWorld Website",
     projectHighlight:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt, recusandae iste impedit exercitationem quis magni dolore hic dolorum nesciunt aliquam!",
+      "I built this website for a green energy company to showcase its renewable energy solutions, including solar and wind power. I also used the project to explore and improve my skills in web animations and creating engaging, interactive user experiences.",
     link: "",
     repo: "https://github.com/Demzy06/greenworld-solar",
   },
@@ -22,7 +23,7 @@ const projects = [
     stack: ["React", "JavaScript", "Tailwind Css"],
     projectName: "Fair Havens School",
     projectHighlight:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt, recusandae iste impedit exercitationem quis magni dolore hic dolorum nesciunt aliquam!",
+      "A modern, responsive website built for Fair Havens School to showcase its academic programmes, values, admissions process, and learning environment through a clean and user-friendly digital experience.",
     link: "https://fairhavensschools.com.ng",
     repo: "https://github.com/Demzy06/fair-havens-school",
   },
@@ -31,13 +32,18 @@ const projects = [
     stack: ["React", "JavaScript", "Css"],
     projectName: "Character Counter Web App",
     projectHighlight:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt, recusandae iste impedit exercitationem quis magni dolore hic dolorum nesciunt aliquam!",
+      "Character counter is an analysis tool designed to help users analyze their text by tracking character, word, and sentence counts, reading time, character limits, and letter density. The project also includes theme customization, keyboard accessibility, and responsive layouts for different screen sizes.",
     link: "character-counter-flame.vercel.app",
     repo: "https://github.com/Demzy06/character-counter",
   },
 ];
 
 function ProjectsSection() {
+  const { ref, inView } = useInView({
+    threshold: 0.5,
+    triggerOnce: true,
+  });
+  console.log(inView);
   return (
     <Element name="projects">
       <section className="border-t border-[#EEEEEE] pt-10 pl-5 pr-5">
@@ -45,7 +51,10 @@ function ProjectsSection() {
           {/* <h4 className="uppercase w-fit text-[14px] ml-auto font-medium text-secondry mb-3">
           Selected Works
           </h4> */}
-          <h1 className="w-fit ml-auto tracking-tight mb-25 font-bold">
+          <h1
+            ref={ref}
+            className={`${inView ? "animation-opacity-100" : "animation-opacity-0"} transition-all duration-700 w-fit ml-auto tracking-tight mb-25 font-bold`}
+          >
             Featured <span className="text-secondary">Projects</span>
           </h1>
         </div>
