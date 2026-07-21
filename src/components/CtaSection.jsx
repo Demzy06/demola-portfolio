@@ -1,9 +1,16 @@
-import Button from "./Button";
+import { useInView } from "react-intersection-observer";
 import ButtonJumpTo from "./ButtonJumpTo";
 
 function CtaSection() {
+  const { ref, inView } = useInView({
+    threshold: 0.5,
+    triggerOnce: true,
+  });
   return (
-    <section className="border-t border-[#EEEEEE] pt-20 pl-5 pr-5 mb-10">
+    <section
+      ref={ref}
+      className={`transition-all duration-700 ${inView ? "animation-opacity-100" : "animation-opacity-0"} border-t border-[#EEEEEE] pt-20 pl-5 pr-5 mb-10`}
+    >
       <div className="text-center pb-10">
         <h1 className="mb-6  tracking-tight leading-12">
           Ready to Build Something Extraordinary?

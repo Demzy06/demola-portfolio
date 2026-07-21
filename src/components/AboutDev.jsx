@@ -1,10 +1,18 @@
 import { Element } from "react-scroll";
+import { useInView } from "react-intersection-observer";
 
 function AboutDev() {
+  const { ref, inView } = useInView({
+    threshold: 0.5,
+    triggerOnce: true,
+  });
   return (
     <Element name="about">
-      <section className="border-t border-[#EEEEEE] pt-10 pl-5 pr-5 mb-10">
-        <h4 className="uppercase text-[14px] mb-1 text-secondary">
+      <section
+        ref={ref}
+        className={`transition-all duration-700 ${inView ? "animation-opacity-100" : "animation-opacity-0"} border-t border-[#EEEEEE] pt-10 pl-5 pr-5 mb-10`}
+      >
+        <h4 className="uppercase text-[14px] mb-1  text-secondary">
           The Developer
         </h4>
         <h1 className="mb-3 tracking-tight">Precision In Every Line Of Code</h1>

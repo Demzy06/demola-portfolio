@@ -1,4 +1,5 @@
 import { Element } from "react-scroll";
+import { useInView } from "react-intersection-observer";
 
 const techStacks = [
   "Html",
@@ -12,9 +13,16 @@ const techStacks = [
   "Git",
 ];
 function TechStackSection() {
+  const { ref, inView } = useInView({
+    threshold: 0.5,
+    triggerOnce: true,
+  });
   return (
     <Element className="stacks">
-      <section className="border-t border-[#EEEEEE] pt-10 pl-5 pr-5 pb-10">
+      <section
+        ref={ref}
+        className={`transition-all duration-700 ${inView ? "animation-opacity-100" : "animation-opacity-0"} border-t border-[#EEEEEE] pt-10 pl-5 pr-5 pb-10`}
+      >
         <h4 className="uppercase text-[11px] font-bold tracking-[0.15rem] text-[#727272]">
           Technical Stack
         </h4>

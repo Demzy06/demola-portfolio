@@ -1,15 +1,21 @@
+import { useInView } from "react-intersection-observer";
 import ProjectStack from "./ProjectStack";
 
 import Button from "./Button";
-// import ArrowIcon from "../assets/icons/arrowIcon.png";
-// import ShareBox from "../assets/icons/sharebox.webp";
-
 import ArrowFilledIcon from "@iconify-react/weui/arrow-filled";
 import ShareBoxFillIcon from "@iconify-react/ri/share-box-fill";
 
 function ProjectCard({ project }) {
+  const { ref, inView } = useInView({
+    threshold: 0.5,
+    triggerOnce: true,
+  });
+  console.log(inView);
   return (
-    <div className="mb-20">
+    <div
+      ref={ref}
+      className={`transition-all duration-700 ${inView ? "animation-opacity-100" : "animation-opacity-0"} mb-20`}
+    >
       <div className="mb-8 shadow-xl rounded-xl">
         <img
           src={project.image}

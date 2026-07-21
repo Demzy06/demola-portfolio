@@ -6,6 +6,7 @@ import Button from "./Button";
 function HeroSection() {
   const { ref, inView } = useInView({
     threshold: 0,
+    triggerOnce: true,
   });
   console.log(inView);
   return (

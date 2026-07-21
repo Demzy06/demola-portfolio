@@ -1,3 +1,5 @@
+import { useInView } from "react-intersection-observer";
+
 const reachMe = [
   { social: "GitHub", path: "https://github.com/Demzy06?tab=repositories" },
   {
@@ -9,8 +11,15 @@ const reachMe = [
 const year = new Date().getFullYear();
 
 function Footer() {
+  const { ref, inView } = useInView({
+    threshold: 0.5,
+    triggerOnce: true,
+  });
   return (
-    <footer className="border-t border-[#EEEEEE] pt-10 pl-5 pr-5 mb-10">
+    <footer
+      ref={ref}
+      className={`transition-all duration-700 ${inView ? "animation-opacity-100" : "animation-opacity-0"} border-t border-[#EEEEEE] pt-10 pl-5 pr-5 mb-10`}
+    >
       <div className="m-auto w-fit mb-6">
         <h3 className="mb-3 uppercase text-[20px] w-fit m-auto scale-x-[1.4] tracking-tighter font-bold">
           Demola Olayode
