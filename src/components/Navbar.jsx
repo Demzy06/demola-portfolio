@@ -37,14 +37,12 @@ function Navbar({ navIsOpen, setNavIsOpen }) {
             </Link>
           ))}
         </div>
-        <div>
-          <ButtonJumpTo
-            text="Start Project"
-            className="pl-12 pr-12 p-3.5 font-semibold bg-black text-white tracking-wider text-[17px] rounded-3xl w-fit md:p-2 md:pl-4 md:pr-4 md:text-[14px] md:font-medium -mb-10"
-            path="contact"
-            setNavIsOpen={setNavIsOpen}
-          />
-        </div>
+        <ButtonJumpTo
+          text="Start Project"
+          className="pl-12 pr-12 p-3.5 font-semibold bg-black text-white tracking-wider text-[17px] rounded-3xl w-fit md:p-2 md:pl-4 md:pr-4 md:text-[14px] md:font-medium inline-block mt-10 md:mt-0"
+          path="contact"
+          setNavIsOpen={setNavIsOpen}
+        />
       </ul>
     </nav>
   );
