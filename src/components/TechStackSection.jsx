@@ -21,7 +21,7 @@ function TechStackSection() {
     <Element className="stacks">
       <section
         ref={ref}
-        className={`transition-all duration-700 ${inView ? "animation-opacity-100" : "animation-opacity-0"} border-t border-[#EEEEEE] pt-10 pl-5 pr-5 pb-10`}
+        className={`transition-all duration-700 ${inView ? "animation-opacity-100" : "animation-opacity-0"} border-t border-[#EEEEEE] pt-10 pl-5 pr-5 pb-10 md:pl-10 md:pr-10 md:p-20`}
       >
         <h4 className="uppercase text-[11px] font-bold tracking-[0.15rem] text-[#727272]">
           Technical Stack

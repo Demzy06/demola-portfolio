@@ -7,6 +7,7 @@ import FairhavenPic from "../assets/projectsImages/fairhavens.webp";
 import CharacterCounterPic from "../assets/projectsImages/charactercounter.webp";
 import ExpenseTrackerPic from "../assets/projectsImages/expensetracker.webp";
 import DevfinderPic from "../assets/projectsImages/devfinder.webp";
+import Button from "./Button";
 
 const projects = [
   {
@@ -46,21 +47,27 @@ function ProjectsSection() {
   console.log(inView);
   return (
     <Element name="projects">
-      <section className="border-t border-[#EEEEEE] pt-10 pl-5 pr-5">
+      <section className="border-t border-[#EEEEEE] pt-10 pl-5 pr-5 flex flex-col md:pl-10 md:pr-10">
         <div className="">
           {/* <h4 className="uppercase w-fit text-[14px] ml-auto font-medium text-secondry mb-3">
           Selected Works
           </h4> */}
           <h1
             ref={ref}
-            className={`${inView ? "animation-opacity-100" : "animation-opacity-0"} transition-all duration-700 w-fit ml-auto tracking-tight mb-25 font-bold`}
+            className={`${inView ? "animation-opacity-100" : "animation-opacity-0"} transition-all duration-700 w-fit ml-auto tracking-tight mb-25 font-bold md:text-[48px]`}
           >
             Featured <span className="text-secondary">Projects</span>
           </h1>
         </div>
-        {projects.map((project) => (
-          <ProjectCard project={project} />
-        ))}
+        <div>
+          {projects.map((project) => (
+            <ProjectCard project={project} />
+          ))}
+        </div>
+        <Button
+          text="View More Projects"
+          className="pl-6 pr-6 p-3 tracking-wider font-medium shadow-[1px_1px_5px_0_#cccbcb] mb-10 text-[13px] bg-white text-black w-fit m-auto"
+        />
       </section>
     </Element>
   );

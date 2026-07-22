@@ -11,11 +11,11 @@ function CtaSection() {
       ref={ref}
       className={`transition-all duration-700 ${inView ? "animation-opacity-100" : "animation-opacity-0"} border-t border-[#EEEEEE] pt-20 pl-5 pr-5 mb-10`}
     >
-      <div className="text-center pb-10">
-        <h1 className="mb-6  tracking-tight leading-12">
+      <div className="text-center pb-10 md:w-[80%] m-auto">
+        <h1 className="mb-6  tracking-tight leading-12 md:text-[48px] md:w-[50%] md:m-auto md:mb-6 md:leading-15">
           Ready to Build Something Extraordinary?
         </h1>
-        <p className="mb-6 text-secondary">
+        <p className="mb-6 text-secondary md:w-[60%] m-auto md:text-center">
           Currently accepting new projects and collaboration opportunities.
           Let's create a digital experience that stands out
         </p>

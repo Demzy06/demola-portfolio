@@ -14,20 +14,22 @@ function ProjectCard({ project }) {
   return (
     <div
       ref={ref}
-      className={`transition-all duration-700 ${inView ? "animation-opacity-100" : "animation-opacity-0"} mb-20`}
+      className={`transition-all duration-700 ${inView ? "animation-opacity-100" : "animation-opacity-0"} mb-20 md:flex justify-between`}
     >
-      <div className="mb-8 shadow-xl rounded-xl">
+      <div className="mb-8 shadow-xl rounded-xl md:flex-6">
         <img
           src={project.image}
           alt="project-snapshot"
           srcset=""
-          className="rounded-xl"
+          className="rounded-xl -[40rem] w-[rem]"
         />
       </div>
-      <div>
+      <div className="md:flex-4 md:m-auto md:pl-10">
         <ProjectStack projectStack={project.stack} />
-        <h3 className="font-bold mb-8">{project.projectName}</h3>
-        <p className="mt-4 text-secondary ">{project.projectHighlight}</p>
+        <h3 className="font-bold mb-8 md:text-[32px]">{project.projectName}</h3>
+        <p className="mt-4 text-secondary md:text-[17px]">
+          {project.projectHighlight}
+        </p>
         <div className="flex w-[80%] mt-4 mb-4 ">
           <Button
             text="View Project"
