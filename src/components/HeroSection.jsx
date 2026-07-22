@@ -44,6 +44,7 @@ function HeroSection() {
         <Button
           className="text-black w-[45%] bg-white border text-center pt-3 pb-3 font-medium"
           text="Resume"
+          path="https://canva.link/hf7gjohklg4xked"
         />
       </div>
     </section>
