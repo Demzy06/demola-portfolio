@@ -14,7 +14,7 @@ function ProjectCard({ project }) {
   return (
     <div
       ref={ref}
-      className={`transition-all duration-700 ${inView ? "animation-opacity-100" : "animation-opacity-0"} mb-20 md:flex justify-between`}
+      className={`transition-all duration-700 ${inView ? "animation-opacity-100" : "animation-opacity-0"} mb-20 md:flex justify-between ${project.layout ? "md:flex-row-reverse" : ""}`}
     >
       <div className="mb-8 shadow-xl rounded-xl md:flex-6">
         <img
