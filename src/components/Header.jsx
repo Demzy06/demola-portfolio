@@ -13,25 +13,21 @@ function Header() {
   });
   console.log(inView);
   return (
-    <>
-      <header
-        ref={ref}
-        className={`${inView ? "opacity-100 ease-in translate-y-0" : "opacity-0 -translate-y-10"} transition-all duration-300 flex justify-between items-center h-18  ${navIsOpen ? "bg-white" : "bg-[#F9F9F9]/70 backdrop-blur-lg"} pl-9 pr-5 border-b border-[#EEEEEE] fixed top-0 left-0 right-0 z-1000`}
-      >
-        <Logo />
-        <button
-          className="h-fit"
-          onClick={() => setNavIsOpen((isOpen) => !isOpen)}
-        >
-          {navIsOpen ? (
-            <CloseIcon height="1.8em" />
-          ) : (
-            <MenuIcon height="1.8em" />
-          )}
-        </button>
-      </header>
+    // <div className="md:flex md:pl-10 md:pr-10 md:h-18 md:items-center md:justify-between h-18 flex items-center pl-10 pr-10">
+    <header
+      ref={ref}
+      className={` md:h-fit flex justify-between items-center w-full h-18 fixed top-0 left-0 right-0 z-1000 md:pl-4 md:pr-10 md:bg-[#F9F9F9]/70 backdrop-blur-lg ${navIsOpen ? "bg-white" : "bg-[#F9F9F9]/70 backdrop-blur-lg"} md:h-0 ${inView ? "opacity-100 ease-in translate-y-0" : "opacity-0 -translate-y-10"} transition-all duration-300`}
+    >
+      <Logo />
       <Navbar navIsOpen={navIsOpen} setNavIsOpen={setNavIsOpen} />
-    </>
+      <button
+        className="h-fit md:hidden ml-auto mr-5"
+        onClick={() => setNavIsOpen((isOpen) => !isOpen)}
+      >
+        {navIsOpen ? <CloseIcon height="1.8em" /> : <MenuIcon height="1.8em" />}
+      </button>
+    </header>
+    // </div>
   );
 }
 
