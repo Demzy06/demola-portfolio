@@ -27,6 +27,7 @@ const projects = [
       "A modern, responsive website built for Fair Havens School to showcase its academic programmes, values, admissions process, and learning environment through a clean and user-friendly digital experience.",
     link: "https://fairhavensschools.com.ng",
     repo: "https://github.com/Demzy06/fair-havens-school",
+    layout: "reverse",
   },
   {
     image: CharacterCounterPic,
