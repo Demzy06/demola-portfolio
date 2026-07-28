@@ -8,6 +8,7 @@ import CharacterCounterPic from "../assets/projectsImages/charactercounter.webp"
 import ExpenseTrackerPic from "../assets/projectsImages/expensetracker.webp";
 import DevfinderPic from "../assets/projectsImages/devfinder.webp";
 import Button from "./Button";
+import { useState } from "react";
 
 const projects = [
   {
@@ -38,14 +39,36 @@ const projects = [
     link: "character-counter-flame.vercel.app",
     repo: "https://github.com/Demzy06/character-counter",
   },
+  {
+    image: ExpenseTrackerPic,
+    stack: ["HTML", "Tailwind Css", "JavaScript"],
+    projectName: "FinTrack",
+    projectHighlight:
+      "FinTrack is a personal finance dashoard that allows users to record income and expenses, calculate balances, and persite data using local storage",
+    link: "https://fintrack-expense-app.vercel.app/",
+    repo: "https://github.com/Demzy06/expense-tracker-app",
+    layout: "reverse",
+  },
+  {
+    image: DevfinderPic,
+    stack: ["React", "JavaScript", "Css", "API"],
+    projectName: "Devfinder",
+    projectHighlight:
+      "Built this web app that allows users search for profile on github, it displays the numbers of repositories the profile has, shows the socials of the profile and other things too",
+    link: "https://github-search-app-wheat.vercel.app/",
+    repo: "https://github.com/Demzy06/github-search-appr",
+  },
 ];
 
 function ProjectsSection() {
+  const [isOpen, setisOpen] = useState(false);
+
+  const projectArr = isOpen ? projects : projects.slice(0, 3);
+
   const { ref, inView } = useInView({
     threshold: 0.5,
     triggerOnce: true,
   });
-  console.log(inView);
   return (
     <Element name="projects">
       <section className="border-t border-[#EEEEEE] pt-10 pl-5 pr-5 flex flex-col md:pl-10 md:pr-10">
@@ -61,14 +84,18 @@ function ProjectsSection() {
           </h1>
         </div>
         <div>
-          {projects.map((project) => (
+          {projectArr.map((project) => (
             <ProjectCard project={project} />
           ))}
         </div>
-        <Button
-          text="View More Projects"
-          className="pl-6 pr-6 p-3 tracking-wider font-medium shadow-[1px_1px_5px_0_#cccbcb] mb-10 text-[13px] bg-white text-black w-fit m-auto"
-        />
+
+        {!isOpen && (
+          <Button
+            text="View More Projects"
+            className="pl-6 pr-6 p-3 tracking-wider font-medium shadow-[1px_1px_5px_0_#cccbcb] mb-10 text-[13px] bg-white text-black w-fit m-auto"
+            onClick={setisOpen}
+          />
+        )}
       </section>
     </Element>
   );
