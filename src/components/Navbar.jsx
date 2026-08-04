@@ -1,13 +1,7 @@
 import ButtonJumpTo from "./ButtonJumpTo";
 import { Link } from "react-scroll";
 import { useInView } from "react-intersection-observer";
-
-const navLinks = [
-  { title: "Projects", path: "projects" },
-  { title: "About", path: "about" },
-  { title: "Technical Stack", path: "stacks" },
-  { title: "Contact", path: "contact" },
-];
+import { navLinks } from "../data/Navbar";
 
 function Navbar({ navIsOpen, setNavIsOpen }) {
   const { ref, inView } = useInView({

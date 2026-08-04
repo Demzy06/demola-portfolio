@@ -1,17 +1,7 @@
 import { Element } from "react-scroll";
 import { useInView } from "react-intersection-observer";
+import { techStacks } from "../data/TechStackSection";
 
-const techStacks = [
-  "Html",
-  "Css",
-  "javaScript",
-  "React Js",
-  "Tailwind",
-  "Bootstrap",
-  "Styled Components",
-  "Motion",
-  "Git",
-];
 function TechStackSection() {
   const { ref, inView } = useInView({
     threshold: 0.5,
