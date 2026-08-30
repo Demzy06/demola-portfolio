@@ -3,6 +3,7 @@ import FairhavenPic from "../assets/projectsImages/fairhavens.webp";
 import CharacterCounterPic from "../assets/projectsImages/charactercounter.webp";
 import ExpenseTrackerPic from "../assets/projectsImages/expensetracker.webp";
 import DevfinderPic from "../assets/projectsImages/devfinder.webp";
+import FxCheckerPic from "../assets/projectsImages/fx-checker.webp"
 
 export const projects = [
   {
@@ -51,5 +52,14 @@ export const projects = [
       "Built this web app that allows users search for profile on github, it displays the numbers of repositories the profile has, shows the socials of the profile and other things too",
     link: "https://github-search-app-wheat.vercel.app/",
     repo: "https://github.com/Demzy06/github-search-appr",
+  },
+  {
+    image: "FxCheckerPic",
+    stack: ["React", "JavaScript", "Tailwind CSS", "API", "Vite"],
+    projectName: "Devfinder",
+    projectHighlight:
+      "FX Checker is a responsive web application that allows users to check and compare currency exchange rates in real time. Users can select a base currency, choose a target currency, enter an amount, and view the converted value using live exchange-rate data. Save currency pair in favorites, log conversions.",
+    link: "https://fx-checker-peach.vercel.app/",
+    repo: "https://github.com/Demzy06/fx-checker",
   },
 ];
