@@ -1,7 +1,7 @@
 function ProjectStack({ projectStack }) {
   return (
     <div className="mt-2 mb-5">
-      <ul className="flex flex-wrap">
+      <ul className="flex flex-wrap gap-y-2">
         {projectStack.map((stack) => (
           <li className="pt-1 pb-1 p-3.5 h-fit font-bold tracking-widest rounded-full uppercase bg-[#EEEEEE] mr-2 text-[#727272] text-[10px] border border-[#cccbcb] md:mb-4">
             {stack}
