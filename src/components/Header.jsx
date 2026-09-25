@@ -11,7 +11,6 @@ function Header() {
   const { ref, inView } = useInView({
     threshold: 0,
   });
-  console.log(inView);
   return (
     // <div className="md:flex md:pl-10 md:pr-10 md:h-18 md:items-center md:justify-between h-18 flex items-center pl-10 pr-10">
     <header
