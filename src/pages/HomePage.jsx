@@ -8,16 +8,18 @@ import { ContactForm } from "../components/ContactForm";
 import Footer from "../components/Footer";
 function HomePage() {
   return (
-    <div className="">
+    <>
       <Header />
-      <HeroSection />
-      <ProjectsSection />
-      <AboutDev />
-      <TechStackSection />
-      <CtaSection />
-      <ContactForm />
+      <main>
+        <HeroSection />
+        <ProjectsSection />
+        <AboutDev />
+        <TechStackSection />
+        <CtaSection />
+        <ContactForm />
+      </main>
       <Footer />
-    </div>
+    </>
   );
 }
 
