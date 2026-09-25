@@ -8,7 +8,6 @@ function HeroSection() {
     threshold: 0,
     triggerOnce: true,
   });
-  console.log(inView);
   return (
     <section
       ref={ref}
