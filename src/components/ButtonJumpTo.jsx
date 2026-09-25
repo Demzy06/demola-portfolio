@@ -10,7 +10,7 @@ function ButtonJumpTo({ className, text, path, offset, setNavIsOpen }) {
       className={className}
       onClick={setNavIsOpen ? () => setNavIsOpen((isOpen) => !isOpen) : ""}
     >
-      <button>{text}</button>
+      <button className="cursor-pointer">{text}</button>
     </Link>
   );
 }
