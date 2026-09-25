@@ -23,6 +23,7 @@ export const projects = [
       "FX Checker is a responsive web application that allows users to check and compare currency exchange rates in real time. Users can select a base currency, choose a target currency, enter an amount, and view the converted value using live exchange-rate data. Save currency pair in favorites, log conversions.",
     link: "https://fx-checker-peach.vercel.app/",
     repo: "https://github.com/Demzy06/fx-checker",
+    layout: "reverse"
   },
   {
     image: FairhavenPic,
@@ -32,7 +33,6 @@ export const projects = [
       "A modern, responsive website built for Fair Havens School to showcase its academic programmes, values, admissions process, and learning environment through a clean and user-friendly digital experience.",
     link: "https://fairhavensschools.com.ng",
     repo: "https://github.com/Demzy06/fair-havens-school",
-    layout: "reverse",
   },
   {
     image: CharacterCounterPic,
@@ -42,6 +42,7 @@ export const projects = [
       "Character counter is an analysis tool designed to help users analyze their text by tracking character, word, and sentence counts, reading time, character limits, and letter density. The project also includes theme customization, keyboard accessibility, and responsive layouts for different screen sizes.",
     link: "character-counter-flame.vercel.app",
     repo: "https://github.com/Demzy06/character-counter",
+    layout: "reverse",
   },
   {
     image: ExpenseTrackerPic,
@@ -51,7 +52,6 @@ export const projects = [
       "FinTrack is a personal finance dashoard that allows users to record income and expenses, calculate balances, and persite data using local storage",
     link: "https://fintrack-expense-app.vercel.app/",
     repo: "https://github.com/Demzy06/expense-tracker-app",
-    layout: "reverse",
   },
   {
     image: DevfinderPic,
@@ -61,5 +61,6 @@ export const projects = [
       "Built this web app that allows users search for profile on github, it displays the numbers of repositories the profile has, shows the socials of the profile and other things too",
     link: "https://github-search-app-wheat.vercel.app/",
     repo: "https://github.com/Demzy06/github-search-appr",
+    layout: "reverse",
   },
 ];
